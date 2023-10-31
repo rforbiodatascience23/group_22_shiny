@@ -20,7 +20,7 @@ attachment::att_amend_desc()
 
 ## Add modules ----
 ## Create a module infrastructure in R/
-golem::add_module(name = "aminoacid_abundance", with_test = F) # Name of the module
+golem::add_module(name = "DNAtoPeptides", with_test = F) # Name of the module
 golem::add_module(name = "aminoacid_abundance", with_test = F) # Name of the module
 
 ## Add helper functions ----

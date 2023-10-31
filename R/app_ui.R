@@ -12,8 +12,8 @@ app_ui <- function(request) {
     fluidPage(
       h1("App22"),
       tabsetPanel(
-        tabPanel(title = "panel1",
-                 "randomDNAseq"),
+        tabPanel(title = "Central Dogma",
+                 mod_DNAtoPeptides_ui("DNAtoPeptides_1")),
         tabPanel(title = "Aminoacid Abundance",
                  mod_aminoacid_abundance_ui("aminoacid_abundance_1"))
       )
