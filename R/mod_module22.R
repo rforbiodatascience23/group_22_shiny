@@ -10,23 +10,7 @@
 mod_module22_ui <- function(id){
   ns <- NS(id)
   tagList(
-    shiny::sidebarLayout(
-      shiny::sidebarPanel(
-        shiny::textAreaInput(
-          inputId = ns("peptide"),
-          label = "Peptide sequence",
-          width = 300,
-          height = 100,
-          placeholder = "Insert peptide sequence"
-        )
-      ),
-      shiny::mainPanel(
-        shiny::plotOutput(
-          outputId = ns("abundance")
-        )
 
-      )
-    )
   )
 }
 #' module22 Server Functions
