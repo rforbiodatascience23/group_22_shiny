@@ -39,3 +39,11 @@ golem_add_external_resources <- function() {
     # for example, you can add shinyalert::useShinyalert()
   )
 }
+
+
+tabsetPanel(
+  tabPanel(title = "panel1",
+           "module1"),
+  tabPanel(title = "panel2",
+           "module2")
+)
