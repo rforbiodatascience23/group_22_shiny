@@ -1,17 +1,34 @@
 Package: App22
-Title: An Amazing Shiny App
+Title: First Shiny App
 Version: 0.0.0.9000
-Authors@R: 
-    person(given = "firstname",
-           family = "lastname",
-           role = c("aut", "cre"),
-           email = "your@email.com")
-Description: What the package does (one paragraph).
-License: What license is it under?
+Authors@R:
+  c(person(given = "Dionysios",
+           family = "Dimitreas",
+           role = c("aut", "cre"), # There must be a "cre", but there can only be one
+           email = "s232752@dtu.dk"), 
+    person(given = "Ander",
+           family = "Barrio",
+           role = "aut",
+           email = "anderbarrio@gmail.com"),
+    person(given = "Valeria",
+           family = "Tedeschi",
+           role = "aut",
+           email = "s231945@dtu.dk"),
+    person(given = "Angeliki",
+           family = "Vliora",
+           role = "aut",
+           email = "s233059@dtu.dk"),
+    person(given = "Erikas",
+           family = "Mikuzis",
+           role = "aut",
+           email = "s223164@dtu.dk"))
+Description: First Shiny App
+License: MIT + file LICENSE
 Imports: 
     config (>= 0.3.1),
     golem (>= 0.4.1),
+    pkgload,
     shiny (>= 1.7.5)
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 7.1.1
+RoxygenNote: 7.2.3

@@ -14,8 +14,8 @@ app_ui <- function(request) {
       tabsetPanel(
         tabPanel(title = "panel1",
                  "randomDNAseq"),
-        tabPanel(title = "panel2",
-                 "transcription")
+        tabPanel(title = "Aminoacid Abundance",
+                 mod_aminoacid_abundance_ui("aminoacid_abundance_1"))
       )
     )
   )
