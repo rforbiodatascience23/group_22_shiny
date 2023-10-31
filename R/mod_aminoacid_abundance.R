@@ -10,24 +10,43 @@
 mod_aminoacid_abundance_ui <- function(id){
   ns <- NS(id)
   tagList(
-    sidebarLayout(
-      sidebarPanel(
-        "peptide_sequence"
+    shiny::sidebarLayout(
+      shiny::sidebarPanel(
+        shiny::textAreaInput(
+          inputId = ns("peptide"),
+          label = "Peptide sequence",
+          width = 300,
+          height = 100,
+          placeholder = "Insert peptide sequence"
+        )
       ),
-      mainPanel(
-        "plot"
+      shiny::mainPanel(
+        shiny::plotOutput(
+          outputId = ns("abundance")
+        )
+
       )
     )
   )
 }
 
 #' aminoacid_abundance Server Functions
-#'
+#' @importfrom ggplot2 theme
+#' @import yourpackage
 #' @noRd
 mod_aminoacid_abundance_server <- function(id){
   moduleServer( id, function(input, output, session){
     ns <- session$ns
 
+    output$abundance <- renderPlot({
+      if(input$peptide == ""){
+        NULL
+      } else{
+        input$peptide |>
+          group22::ander_1() +
+          ggplot2::theme(legend.position = "none")
+      }
+    })
   })
 }
 

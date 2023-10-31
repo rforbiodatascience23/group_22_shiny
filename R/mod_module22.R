@@ -10,7 +10,14 @@
 mod_module22_ui <- function(id){
   ns <- NS(id)
   tagList(
-
+    sidebarLayout(
+      sidebarPanel(
+        "peptide_sequence"
+      ),
+      mainPanel(
+        "plot"
+      )
+    )
   )
 }
 #' module22 Server Functions

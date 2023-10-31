@@ -8,3 +8,5 @@ app_server <- function(input, output, session) {
   # Your application server logic
   mod_aminoacid_abundance_server("aminoacid_abundance_1")
 }
+
+mod_module22_server("module22_1")
