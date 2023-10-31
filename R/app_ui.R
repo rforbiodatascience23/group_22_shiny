@@ -10,7 +10,13 @@ app_ui <- function(request) {
     golem_add_external_resources(),
     # Your application UI logic
     fluidPage(
-      h1("App22")
+      h1("App22"),
+      tabsetPanel(
+        tabPanel(title = "panel1",
+                 "randomDNAseq"),
+        tabPanel(title = "panel2",
+                 "transcription")
+      )
     )
   )
 }
@@ -39,11 +45,3 @@ golem_add_external_resources <- function() {
     # for example, you can add shinyalert::useShinyalert()
   )
 }
-
-
-tabsetPanel(
-  tabPanel(title = "panel1",
-           "randomDNAseq"),
-  tabPanel(title = "panel2",
-           "transcription")
-)
