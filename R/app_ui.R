@@ -43,7 +43,7 @@ golem_add_external_resources <- function() {
 
 tabsetPanel(
   tabPanel(title = "panel1",
-           "module1"),
+           "randomDNAseq"),
   tabPanel(title = "panel2",
-           "module2")
+           "transcription")
 )
